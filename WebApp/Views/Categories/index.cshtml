@@ -1,15 +1,27 @@
-@using WebApp.Models;
 @model List<Category>
 
 @section title {
     <h1>Categories</h1>
 }
 
-<ul>
-    @foreach(var category in Model)
-    {
-        <li>
-            @category.Name
-        </li>
-    }
-</ul>
+@if (Model != null && Model.Count() > 0) {
+    <table class="table table-hover table-light">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td class="py-2"><a class="btn btn-light disabled">@category.Name</a></td>
+                    <td class="py-2"><a class="btn btn-light disabled">@category.Description</a></td>
+                    <td class="py-2"><a class="btn btn-outline-primary" asp-controller="categories" asp-action="edit" asp-route-id="@category.CategoryId">Edit</a></td>                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}

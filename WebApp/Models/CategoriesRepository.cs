@@ -5,9 +5,9 @@ namespace WebApp.Models
         // data that seeds in memory storage
         private static List<Category> _categories = new List<Category>()
         {
-            new Category { CategoryId = 1, Name = "Can", Description = "Can" },
-            new Category { CategoryId = 2, Name = "Snack", Description = "Snack" },
-            new Category { CategoryId = 3, Name = "Toy", Description = "Toy" }
+            new Category { CategoryId = 1, Name = "Cans", Description = "Contains the essential nutrients your kitty needs to support a strong immune system." },
+            new Category { CategoryId = 2, Name = "Treats", Description = "Your kitty will love the crunchy outside and soft and creamy inside." },
+            new Category { CategoryId = 3, Name = "Toy", Description = "Stimulates your kitty’s natural hunting instincts to spark up play and exercise." }
         };
 
         public static void AddCategory(Category category)
