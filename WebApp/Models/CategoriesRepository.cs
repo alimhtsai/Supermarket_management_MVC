@@ -7,7 +7,7 @@ namespace WebApp.Models
         {
             new Category { CategoryId = 1, Name = "Cans", Description = "Contains the essential nutrients your kitty needs to support a strong immune system." },
             new Category { CategoryId = 2, Name = "Treats", Description = "Your kitty will love the crunchy outside and soft and creamy inside." },
-            new Category { CategoryId = 3, Name = "Toy", Description = "Stimulates your kitty’s natural hunting instincts to spark up play and exercise." }
+            new Category { CategoryId = 3, Name = "Toys", Description = "Stimulates your kitty’s natural hunting instincts to spark up play and exercise." }
         };
 
         public static void AddCategory(Category category)
@@ -41,7 +41,7 @@ namespace WebApp.Models
         {
             if (categoryId != category.CategoryId) return;
 
-            var categoryToUpdate = GetCategoryById(categoryId);
+            var categoryToUpdate = _categories.FirstOrDefault(x => x.CategoryId == categoryId);
             if (categoryToUpdate != null)
             {
                 categoryToUpdate.Name = category.Name;
