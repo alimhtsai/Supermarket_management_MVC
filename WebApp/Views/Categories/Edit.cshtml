@@ -9,38 +9,10 @@
 
 @if (Model != null) 
 {
-    <form method="post" asp-controller="categories" asp-action="edit">
-        <input type="hidden" asp-for="CategoryId" />
-        <div class="row mb-3">
-            <div class="col-2">
-                <label asp-for="Name" class="col-form-label"></label>
-            </div>
-            <div class="col-6">
-                <input type="text" asp-for="Name" class="form-control" />
-            </div>
-            <div class="col">
-                <span class="text-danger" asp-validation-for="Name"></span> 
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-2">
-                <label asp-for="Description" class="col-form-label"></label>
-            </div>
-            <div class="col-6">
-                <textarea type="text" asp-for="Description" rows="3" class="form-control" ></textarea>
-            </div>
-            <div class="col">
-                <span class="text-danger" asp-validation-for="Description"></span> 
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-8"></div>
-            <div class="col-2">
-                <input type="submit" class="btn btn-primary" value="Save" />
-            </div>
-        </div>
-    </form>
-} else {
+    <partial name="_Category" model="@Model" />
+} 
+else 
+{
     <div class="alert alert-dismissible alert-danger">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.

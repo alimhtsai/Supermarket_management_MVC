@@ -13,6 +13,7 @@ namespace WebApp.Controllers
 
         public IActionResult Edit(int? id)
         {
+            ViewBag.Action = "edit";
             var category = CategoriesRepository.GetCategoryById(id.HasValue ? id.Value : 0);
             return View(category);
         }
@@ -30,6 +31,7 @@ namespace WebApp.Controllers
 
         public IActionResult Add()
         {
+            ViewBag.Action = "add";
             return View();
         }
 
