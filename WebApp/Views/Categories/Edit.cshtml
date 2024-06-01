@@ -12,6 +12,9 @@
                 <div class="col-6">
                     <input type="text" asp-for="Name" class="form-control" />
                 </div>
+                <div class="col">
+                    <span class="text-danger" asp-validation-for="Name"></span> 
+                </div>
             </div>
             <div class="row mb-3">
                 <div class="col-2">
@@ -19,6 +22,9 @@
                 </div>
                 <div class="col-6">
                     <textarea type="text" asp-for="Description" rows="3" class="form-control" ></textarea>
+                </div>
+                <div class="col">
+                    <span class="text-danger" asp-validation-for="Description"></span> 
                 </div>
             </div>
             <div class="row mb-3">
