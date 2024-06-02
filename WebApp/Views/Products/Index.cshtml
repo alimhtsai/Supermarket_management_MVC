@@ -1,0 +1,30 @@
+@model List<Product>
+
+@section title {
+    <h2>Products</h2>
+}
+
+@if (Model != null && Model.Count() > 0) 
+{
+    <table class="table table-hover table-light">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td class="py-2"><a class="btn btn-light disabled">@product.Category?.Name</a></td>
+                    <td class="py-2"><a class="btn btn-light disabled">@product.Name</a></td>
+                    <td class="py-2"><a class="btn btn-light disabled">@product.Price?.ToString("c")</a></td>
+                    <td class="py-2"><a class="btn btn-light disabled">@product.Quantity</a></td>               
+                </tr>
+            }
+        </tbody>
+    </table>
+}
