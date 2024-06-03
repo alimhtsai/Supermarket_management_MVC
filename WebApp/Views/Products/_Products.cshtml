@@ -12,8 +12,8 @@
         <tbody>
             @foreach (var product in Model)
             {
-                <tr>
-                    <td class="py-2 text-primary">@product.Name</td>
+                <tr class="product-row">
+                    <td class="py-2">@product.Name</td>
                     <td class="py-2">@product.Quantity</td>
                 </tr>
             }

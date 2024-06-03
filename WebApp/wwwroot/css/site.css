@@ -1,0 +1,8 @@
+tr.highlight > td {
+    background-color: #78c2ad;
+    color: white;
+}
+
+tr.highlight:hover > td {
+    color: #78c2ad;
+}

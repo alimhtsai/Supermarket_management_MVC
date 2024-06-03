@@ -43,10 +43,17 @@
     <script>
         // JQuery
         $(function () {
-            // Handle category selection
+            // handle category selection
             $("#SelectedCategoryId").on("change", function () {
                 $("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
             })
+
+            // handle product selection
+            $("#productsPartial").on('click', '.product-row', function () {
+                // highlight the row selected
+                $('.product-row').removeClass('highlight');
+                $(this).addClass('highlight');
+            });
         });
     </script>
 }
