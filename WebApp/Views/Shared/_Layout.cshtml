@@ -18,6 +18,9 @@
                 <div class="collapse navbar-collapse" id="navbarColor04">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
+                            <a class="nav-link text-success" asp-controller="sales" asp-action="index">Sell</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-info" asp-controller="categories" asp-action="index">Categories</a>
                         </li>
                         <li class="nav-item">
@@ -36,6 +39,9 @@
             @RenderBody()
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

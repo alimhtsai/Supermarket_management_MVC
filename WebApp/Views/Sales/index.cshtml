@@ -13,6 +13,7 @@
 <div class="row">
     <div class="col-4">
         @* Category selection *@
+        <h6 class="mb-3">Please select a category</h6>
         <select asp-for="SelectedCategoryId" class="form-control">
             <option>- Please Select -</option>
             @if (Model.Categories != null && Model.Categories.Count() > 0)
@@ -24,7 +25,7 @@
             }
         </select>
         <br />
-        <div>
+        <div id="productsPartial">
             @* Product List *@
         </div>
         <br />
@@ -37,3 +38,15 @@
         @* List of transactions *@
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        // JQuery
+        $(function () {
+            // Handle category selection
+            $("#SelectedCategoryId").on("change", function () {
+                $("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
+            })
+        });
+    </script>
+}
