@@ -33,6 +33,16 @@
             @* Product Details *@
         </div>
         @* Sales form *@
+        <form method="post" asp-controller="sales" asp-action="sell" id="formSale">
+            <input asp-for="SelectedProductId" type="hidden" />
+            <div class="form-group pb-3">
+                <label class="pb-2" asp-for="QuantityToSell"></label>
+                <input asp-for="QuantityToSell" class="form-control" type="number" min="1" />
+            </div>
+            <div class="form-group pb-3">
+                <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+        </form>
     </div>
     <div class="col">
         @* List of transactions *@
@@ -43,10 +53,17 @@
     <script>
         // JQuery
         $(function () {
+            
+            // initialize the form
+            $("#formSale").hide();
+            $("#QuantityToSell").val("");
+
+
             // handle category selection
             $("#SelectedCategoryId").on("change", function () {
                 $("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
                 $("#productDetailPartial").html("");
+                $("#formSale").hide();
             })
 
             // handle product selection
@@ -60,6 +77,14 @@
 
                 // Load the details of the product in a partial view                
                 $("#productDetailPartial").load("/sales/SellProductPartial", { productId: productId });
+
+                if (productId > 0) {
+                    $("#SelectedProductId").val(productId);
+                    $("#formSale").show();
+                } else {
+                    $("#SelectedProductId").val("");
+                    $("#formSale").hide();
+                }
             });
         });
     </script>
