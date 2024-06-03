@@ -1,7 +1,7 @@
 @model List<Product>
 
 @section title {
-    <h2>Products</h2>
+    <h2>Manage Products</h2>
 }
 
 @if (Model != null && Model.Count() > 0) 
@@ -27,4 +27,8 @@
             }
         </tbody>
     </table>
+    <div class="row mb-3"></div>
+    <div class="col-2">
+        <a class="btn btn-primary" asp-controller="products" asp-action="add">Add</a>
+    </div>
 }
