@@ -27,6 +27,20 @@ namespace WebApp.Controllers
             if (ModelState.IsValid)
             {
                 // sell the product
+                var prod = ProductsRepository.GetProductById(salesViewModel.SelectedProductId);
+                if (prod != null)
+                {
+                    TransactionsRepository.Add(
+                        "Cashier1", // will modify when using authentication and authorization
+                        salesViewModel.SelectedProductId,
+                        prod.Name,
+                        prod.Price.HasValue ? prod.Price.Value : 0,
+                        prod.Quantity.HasValue ? prod.Quantity.Value : 0,
+                        salesViewModel.QuantityToSell);
+
+                    prod.Quantity -= salesViewModel.QuantityToSell;
+                    ProductsRepository.UpdateProduct(salesViewModel.SelectedProductId, prod);
+                }
             }
             var product = ProductsRepository.GetProductById(salesViewModel.SelectedProductId);
             salesViewModel.SelectedCategoryId = (product?.CategoryId == null) ? 0 : product.CategoryId.Value;

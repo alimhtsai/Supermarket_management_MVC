@@ -7,7 +7,7 @@
             new Product { ProductId = 1, CategoryId = 1, Name = "Applaws Mousse Tuna Grain-Free Wet Cat Food", Quantity = 100, Price = 1.99 },
             new Product { ProductId = 2, CategoryId = 1, Name = "Applaws Chicken Breast with Pumpkin Canned Cat Food", Quantity = 200, Price = 1.99 },
             new Product { ProductId = 3, CategoryId = 2, Name = "Temptations MixUps Surfers' Delight Flavor Soft & Crunchy Cat Treats", Quantity = 300, Price = 15.50 },
-            new Product { ProductId = 4, CategoryId = 2, Name = "Greenies Feline Oven Roasted Chicken Flavor Adult Dental Cat Treats", Quantity = 100, Price = 4.66 },
+            new Product { ProductId = 4, CategoryId = 2, Name = "Inaba Churu for Kittens Chicken Recipe Puree Grain-Free Lickable Cat Treats", Quantity = 100, Price = 3.99 },
             new Product { ProductId = 5, CategoryId = 3, Name = "Frisco Bird with Feathers Teaser Wand Cat Toy with Catnip", Quantity = 100, Price = 4.08 },
             new Product { ProductId = 6, CategoryId = 3, Name = "Quirky Kitty Cute Koi Wand Cat Toy", Quantity = 100, Price = 8.99 }
         };
