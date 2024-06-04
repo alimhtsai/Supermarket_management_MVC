@@ -21,7 +21,7 @@
                 <td>@tran.TimeStamp.ToString("yyyy/MM/dd HH:mm:ss")</td>
                 <td>@tran.BeforeQty</td>
                 <td>@tran.SoldQty</td>
-                <td>@(tran.BeforeQty - tran.SoldQty)</td>
+                <td class="text-danger">@(tran.BeforeQty - tran.SoldQty)</td>
                 <td>@(string.Format("{0:c}", tran.SoldQty * tran.Price))</td>
             </tr>
         }

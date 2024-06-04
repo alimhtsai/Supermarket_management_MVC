@@ -8,8 +8,9 @@ namespace WebApp.ViewComponents
     {
         public IViewComponentResult Invoke(string userName)
         {
-            var transaction = TransactionsRepository.GetByDayAndCashier(userName, DateTime.Now);
-            return View(transaction);
+            var transactions = TransactionsRepository.GetByDayAndCashier(userName, DateTime.Now);
+
+            return View(transactions);
         }
     }
 }
