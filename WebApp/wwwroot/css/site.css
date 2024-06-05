@@ -6,3 +6,19 @@ tr.highlight > td {
 tr.highlight:hover > td {
     color: #78c2ad;
 }
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printarea, #printarea * {
+        visibility: visible;
+    }
+
+    #printarea {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
