@@ -1,4 +1,4 @@
-## Market Management Platform
+## Kiki Supermarket Management Platform
 > C#, JavaScript, HTML, CSS; ASP.NET, JQuery, Bootstrap, Bootswatch
 
 ### Introduction
@@ -15,7 +15,7 @@ https://github.com/alimhtsai/Market_management_platform_mvc/assets/48788292/183e
 ### Local build
 <b>Step 1. Clone the GitHub project to the local directory</b>
 
-`git clone https://github.com/alimhtsai/Market_management_platform_mvc.git`
+`git clone https://github.com/alimhtsai/Supermarket_management_MVC.git`
 
 <b>Step 2. Start the application</b>
 1. Run `cd WebApp` in the terminal to go to the `WebApp` folder.
