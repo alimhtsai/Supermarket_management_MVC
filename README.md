@@ -30,6 +30,7 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
       Hosting environment: Development
 info: Microsoft.Hosting.Lifetime[0]
+      Content root path: .../WebApp
 ```
 4. open [http://localhost:5153/](http://localhost:5153/)
 
